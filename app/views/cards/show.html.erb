@@ -1,34 +1,20 @@
 <p id="notice"><%= notice %></p>
-
-<p>
-  <strong>Name:</strong>
-  <%= @card.name %>
-</p>
-
-<p>
-  <strong>Card type:</strong>
-  <%= @card.card_type %>
-</p>
-
-<p>
-  <strong>Description:</strong>
-  <%= @card.description %>
-</p>
-
-<p>
-  <strong>Attack:</strong>
-  <%= @card.attack %>
-</p>
-
-<p>
-  <strong>Defence:</strong>
-  <%= @card.defence %>
-</p>
-
-<p>
-  <strong>Price:</strong>
-  <%= @card.price %>
-</p>
-
-<%= link_to 'Edit', edit_card_path(@card) %> |
-<%= link_to 'Back', cards_path %>
+<head class="title">
+    <h1 class="title"> Information on card: </h1>
+</head>
+<div class="columns">
+  <div class="column">
+    <div>
+      <div class="title">
+        <%= @cards.name %>
+      </div>
+      <div class="card-content">
+        <p> Information: </p>
+        <p class="card-footer-item"> Card Type: <%= @cards.card_type %></p>
+        <p class="card-footer-item"> Attack: <%= @cards.attack %></p>
+        <p class="card-footer-item"> Defence: <%= @cards.defence %></p>
+        <p class="card-footer-item"> Price: <%= @cards.price %>.99</p>
+      </div>
+    </div>
+  </div>
+</div>
